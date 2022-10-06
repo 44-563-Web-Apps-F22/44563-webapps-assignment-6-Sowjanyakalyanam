@@ -24,8 +24,8 @@
 
 
     <p id="result">This text will be replaced </p>
-    <div>
-        <img id=" image" src="Killer_Ant.jpg" class="rounded mx-auto d-block" onclick="swpImage()" alt="Killer_Ant"
+    <div class="container">
+        <img id="image" src="Killer_Ant.jpg" class="rounded mx-auto d-block" onclick="swapImage()" alt="Killer_Ant"
             style="width:100px; height:100px;">
     </div>
 
@@ -46,8 +46,7 @@
                 out.innerHTML = "correct - " + correct + " , " + "wrong - " + wrong
             } else {
                 wrong = wrong + 1
-                alert("Wrong musician")
-                out.innerHTML = "correct - " + correct + " , " + "wrong - " + wrong
+                alert("Wrong musician")                out.innerHTML = "correct - " + correct + " , " + "wrong - " + wrong
             }
         }
         function swapImage() {
@@ -57,11 +56,13 @@
                     document.getElementById("image").src = "Killer_Ant.jpg";
                     useImage = useImage + 1
                     break;
-                case 2: useImage = useImage + 1
+                case 2:
                     document.getElementById("image").src = "ladybug-beetle.jpg";
+                    useImage = useImage + 1
                     break;
-                case 3: useImage = 1
+                case 3:
                     document.getElementById("image").src = "Nymph.jpg";
+                    useImage = 1
                     break;
             }
         }
